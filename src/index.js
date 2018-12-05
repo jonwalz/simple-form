@@ -50,7 +50,6 @@ theForm.addEventListener("submit", function(event) {
         chemovar: strain
     }
 
-    console.log("Data: ", data)
     // Now we prepare it for submitting by using the URLSearchParams api
     // We first find the url we want to post to. In this case:
     const rawUrl =
@@ -63,7 +62,6 @@ theForm.addEventListener("submit", function(event) {
     // Set the search params to the URL
     url.search = new URLSearchParams(data)
 
-    console.log("Url: ", url)
     // Now we use the build in fetch api to make a get request and send the data
     fetch(url, { method: "GET" });
 })
