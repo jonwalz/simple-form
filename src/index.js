@@ -55,8 +55,10 @@ theForm.addEventListener("submit", function(event) {
     // We first find the url we want to post to. In this case:
     const rawUrl =
         "https://script.google.com/macros/s/AKfycbyP0re5vf0LmzUNfb4GbSocMBMcG-HtAmaELvZHTGzgZNz6B6Sv/exec";
+
     // Then we use the URL api to construct the URL, so that we are able to use URLSearchParams:
     const url = new URL(rawUrl);
+
     // (This is new shit so don't expect it to work in every browser. Tell people to stop using internet explorer)
     // Set the search params to the URL
     url.search = new URLSearchParams(data)
